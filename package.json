@@ -1,0 +1,31 @@
+{
+  "name": "apportion",
+  "version": "2.0.0",
+  "description": "Apportions arrays or strings into blocks",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hisahi/apportion.git"
+  },
+  "keywords": [
+    "array",
+    "string"
+  ],
+  "author": "Sampo Hippeläinen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hisahi/apportion/issues"
+  },
+  "homepage": "https://github.com/hisahi/apportion#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {}
+}

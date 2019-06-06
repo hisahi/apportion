@@ -70,3 +70,29 @@ describe('apportioning strings', () => {
     expect(result).toEqual(['AB', 'BC', 'CD', 'DE']);
   });
 });
+
+describe('apportioning fails with invalid parameters', () => {
+  test('throws an Error when no parameters', () => {
+    expect(() => apportion()).toThrow(Error);
+  });
+
+  test('throws an Error when no blockSize', () => {
+    expect(() => apportion([1, 2, 3])).toThrow(Error);
+  });
+
+  test('throws a TypeError when indexable is a number', () => {
+    expect(() => apportion(2, 3)).toThrow(TypeError);
+  });
+
+  test('throws a TypeError when blockSize is not integer', () => {
+    expect(() => apportion([1, 2, 3], 2.5)).toThrow(TypeError);
+  });
+
+  test('throws a TypeError when blockSize is negative', () => {
+    expect(() => apportion([1, 2, 3], -2)).toThrow(TypeError);
+  });
+
+  test('throws a TypeError when blockSize is zero', () => {
+    expect(() => apportion([1, 2, 3], 0)).toThrow(TypeError);
+  });
+});

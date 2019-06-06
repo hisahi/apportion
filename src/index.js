@@ -5,11 +5,21 @@
  * Released under the MIT License
  */
 
-const apportion = function apportion(indexable, blockSize,
-  onlyComplete = false, overlapping = false) {
-  if (typeof indexable.slice !== 'function' || typeof indexable.length !== 'number') {
-    throw new TypeError('expected a value with a .slice() and numeric .length');
+const required = function thisParameterIsRequired() {
+  throw new Error('indexable, blockSize required');
+};
+
+const apportion = function apportion(indexable = required(),
+  blockSize = required(), onlyComplete = false, overlapping = false) {
+  if (typeof indexable.slice !== 'function'
+    || typeof indexable.length !== 'number') {
+    throw new TypeError('indexable must have a .slice() and numeric .length');
   }
+  if (blockSize <= 0
+    || !Number.isInteger(blockSize)) {
+    throw new TypeError('blockSize must be a positive integer');
+  }
+
   const increment = overlapping ? 1 : blockSize;
   const portions = [];
   let index = 0;

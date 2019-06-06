@@ -17,7 +17,7 @@ const apportion = function apportion(indexable = required(),
   }
   if (blockSize <= 0
     || !Number.isInteger(blockSize)) {
-    throw new TypeError('blockSize must be a positive integer');
+    throw new Error('blockSize must be a positive integer');
   }
 
   const increment = overlapping ? 1 : blockSize;

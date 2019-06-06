@@ -84,15 +84,15 @@ describe('apportioning fails with invalid parameters', () => {
     expect(() => apportion(2, 3)).toThrow(TypeError);
   });
 
-  test('throws a TypeError when blockSize is not integer', () => {
-    expect(() => apportion([1, 2, 3], 2.5)).toThrow(TypeError);
+  test('throws a Error when blockSize is not integer', () => {
+    expect(() => apportion([1, 2, 3], 2.5)).toThrow(Error);
   });
 
-  test('throws a TypeError when blockSize is negative', () => {
-    expect(() => apportion([1, 2, 3], -2)).toThrow(TypeError);
+  test('throws a Error when blockSize is negative', () => {
+    expect(() => apportion([1, 2, 3], -2)).toThrow(Error);
   });
 
-  test('throws a TypeError when blockSize is zero', () => {
-    expect(() => apportion([1, 2, 3], 0)).toThrow(TypeError);
+  test('throws a Error when blockSize is zero', () => {
+    expect(() => apportion([1, 2, 3], 0)).toThrow(Error);
   });
 });

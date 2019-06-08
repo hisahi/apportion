@@ -1,5 +1,5 @@
 # apportion [![NPM version](https://img.shields.io/npm/v/apportion.svg?style=flat)](https://www.npmjs.com/package/apportion)
-Apportions lists, strings or any other values with a `slice(...)` method and `length` field into blocks of the requested size.
+Apportions arrays, strings or any other values with a `slice(...)` method and `length` field into blocks of the requested size.
 
 ## Install
 Install with [npm](https://www.npmjs.com/):

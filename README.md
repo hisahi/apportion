@@ -34,6 +34,7 @@ console.log(apportion('ABCDE', 2, true, true));      // => [ 'AB', 'BC', 'CD', '
 ```
 
 Note that the module is written for ECMAScript 2015 (ES6/ES2015) and above.
+If you need a version that works on ES5, see [apportion-es5](https://www.npmjs.com/package/apportion-es5).
 
 ## Tests
 ```sh

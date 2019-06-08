@@ -1,0 +1,29 @@
+{
+  "name": "apportion-es5",
+  "version": "2.0.3",
+  "description": "Apportions arrays or strings into blocks",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --verbose",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hisahi/apportion.git"
+  },
+  "keywords": [
+    "array",
+    "string"
+  ],
+  "author": "Sampo Hippeläinen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hisahi/apportion/issues"
+  },
+  "homepage": "https://github.com/hisahi/apportion/tree/master/es5#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {}
+}
